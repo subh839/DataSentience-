@@ -1,0 +1,76 @@
+┌─────────────────────────────────────────────────────────────────┐
+│                       DataSentience Platform                    │
+├─────────────────────────────────────────────────────────────────┤
+│  Frontend (Angular)    │    Backend (FastAPI)    │   AI Layer   │
+│                        │                         │              │
+│  • React Components    │  • FastAPI Server       │  • NVIDIA NIM│
+│  • Real-time UI        │  • 3-Agent Orchestration│  • Embeddings│
+│  • Cost Visualization  │  • Vector Database      │  • Reasoning │
+│  • Query Interface     │  • Business Logic       │  • Planning  │
+└─────────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Angular       │    │   FastAPI        │    │   NVIDIA NIM    │
+│   Frontend      │    │   Backend        │    │   AI Services   │
+│                 │    │                  │    │                 │
+│  • Analyzer     │◄──►│  • Main API      │◄──►│  • Embeddings   │
+│    Component    │    │  • Agent         │    │  • Chat         │
+│  • Services     │    │    Orchestrator  │    │  • Models       │
+│  • Models       │    │  • Vector Store  │    │                 │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                       │                       │
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Browser       │    │   ChromaDB       │    │   Internet      │
+│   Storage       │    │   Vector DB      │    │   Connection    │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+
+
+
+
+User Query
+    │
+    ▼
+Angular Frontend (HTTP POST /api/analyze)
+    │
+    ▼
+FastAPI Backend
+    │
+    ▼
+Agent Orchestrator
+    │
+    ├─────────────────────────────────────┐
+    ▼                                     ▼
+Data Retrieval Agent                 Vector Store
+    │                                     │
+    ▼                                     │
+NVIDIA Embeddings ◄──────────────────────┘
+    │
+    ▼
+Context + Query
+    │
+    ▼
+Reasoning Agent
+    │
+    ▼
+NVIDIA Reasoning
+    │
+    ▼
+Analysis Results
+    │
+    ▼
+Action Planning Agent
+    │
+    ▼
+NVIDIA Planning
+    │
+    ▼
+Action Plan + ROI
+    │
+    ▼
+JSON Response to Frontend
+    │
+    ▼
+User Visualization

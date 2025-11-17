@@ -1,0 +1,19 @@
+# .gitignore - Prevent sensitive files from being committed
+.env
+*.env.local
+*.env.production
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+chroma_data/
+.DS_Store
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
